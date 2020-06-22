@@ -4,7 +4,7 @@ let
   compiler = pkgs.haskell.packages."${compilerVersion}";
 in
   compiler.developPackage {
-    root = ./language-python;
+    root = ./.;
     modifier = drv:
       pkgs.haskell.lib.addBuildTools drv (with pkgs.haskellPackages; [
         cabal-install
